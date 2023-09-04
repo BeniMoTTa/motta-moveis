@@ -1,7 +1,11 @@
-import "./App.css";
-
+import "./index.css";
+import { RoutesMain } from "./routes";
 function App() {
-  return <>começando a aplicação</>;
+  return (
+    <>
+      <RoutesMain />
+    </>
+  );
 }
 
 export default App;

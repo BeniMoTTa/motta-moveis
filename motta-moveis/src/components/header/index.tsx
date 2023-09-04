@@ -1,7 +1,12 @@
 import React from "react";
 
-const headerHome = () => {
-  return <div></div>;
+const Header = () => {
+  return (
+    <header className=" w-full h-[120px] flex bg-[yellow] flex items-center">
+      {" "}
+      testando
+    </header>
+  );
 };
 
-export default headerHome;
+export default Header;
