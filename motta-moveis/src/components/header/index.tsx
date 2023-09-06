@@ -17,10 +17,6 @@ const Header = () => {
           <button className="basic-btn">Criar conta</button>
         </div>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
     </header>
   );
 };
