@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/LogoMottaImoveis.png";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-
+  const [showDropdown, setShowDropdown] = useState(false);
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const checkScreenWidth = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768 && screenWidth <= 1200) {
+      setShowDropdown(true);
+    } else {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    checkScreenWidth();
+    window.addEventListener("resize", checkScreenWidth);
+    return () => {
+      window.removeEventListener("resize", checkScreenWidth);
+    };
+  }, []);
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked");
@@ -34,40 +50,43 @@ const Header = () => {
     }
   };
   return (
-    <header className=" w-full h-[90px] flex bg-[yellow]">
-      <div className="w-[95%] allign px-[2%] h-full bg-[#fff] text-[pink] flex items-center justify-between">
+    <header className="w-full h-[90px] flex bg-[yellow]">
+      <div className="w-[99%] allign px-[2%] h-full bg-[#fff] text-[pink] flex items-center justify-between">
         <img src={logo} alt="" className="w-[160px]" />
-        {}
-        <nav className="hidden md:flex text-[18px] font-bold text-[graphite]">
-          <button
-            className="hoverUnderLineAnimation mr-[20px]"
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </button>
-          <button
-            className="hoverUnderLineAnimation mr-[20px]"
-            onClick={() => scrollToSection("skills")}
-          >
-            Skills
-          </button>
-          <button
-            className="hoverUnderLineAnimation mr-[20px]"
-            onClick={() => scrollToSection("projects")}
-          >
-            Projects
-          </button>
-          <button
-            className="hoverUnderLineAnimation"
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </button>
-        </nav>
+        {showDropdown ? (
+          <nav className="md:flex text-[18px] font-bold text-[graphite]">
+            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[20px]">
+              Criar Conta
+            </button>
+            <button className="w-[120px] h-[50px] text-[16px] rounded-xl text-[black] hover:bg-blueSteelLight hover:text-[white] mr-[20px]">
+              Entrar
+            </button>
+          </nav>
+        ) : (
+          <nav className="md:flex text-[18px] font-bold text-[graphite]">
+            <button className="hoverUnderLineAnimation mr-[20px]">About</button>
+            <button className="hoverUnderLineAnimation mr-[20px]">
+              Technologies
+            </button>
+            <button className="hoverUnderLineAnimation mr-[20px]">
+              Projects
+            </button>
+            <button className="hoverUnderLineAnimation mr-[20px]">
+              Contact
+            </button>
+            <button className="w-[130px] h-[55px] text-[16px] rounded-xl bg-[blue] mr-[20px]">
+              Criar Conta
+            </button>
+            <button className="hoverUnderLineAnimation mr-[20px]">
+              Entrar
+            </button>
+          </nav>
+        )}
         <nav
           className="md:hidden flex burger-menu relative"
           onClick={() => {
-            dropdownButtonHandler();
+            toggleDropdown();
+            updateMenu();
           }}
         >
           <div className={burger_class}></div>
@@ -88,7 +107,7 @@ const Header = () => {
               About
             </button>
             <button
-              className=" py-[10px]"
+              className="py-[10px]"
               onClick={() => scrollToSection("skills")}
             >
               Technologies
@@ -100,7 +119,7 @@ const Header = () => {
               Projects
             </button>
             <button
-              className=" py-[10px]"
+              className="py-[10px]"
               onClick={() => scrollToSection("contact")}
             >
               Contact
