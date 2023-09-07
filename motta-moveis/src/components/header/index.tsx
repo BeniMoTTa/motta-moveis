@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/LogoMottaImoveis.png";
+import { BsPersonUp } from "react-icons/bs";
+
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [menu_class, setMenuClass] = useState("menu hidden");
@@ -58,26 +60,34 @@ const Header = () => {
             <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[20px]">
               Criar Conta
             </button>
-            <button className="w-[120px] h-[50px] text-[16px] rounded-xl text-[black] hover:bg-blueSteelLight hover:text-[white] mr-[20px]">
+            <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-[white] flex gap-2 items-center justify-center  mr-[20px]">
+              <span className="text-[24px]">
+                <BsPersonUp />
+              </span>
               Entrar
             </button>
           </nav>
         ) : (
           <nav className="md:flex text-[18px] font-bold text-[graphite]">
-            <button className="hoverUnderLineAnimation mr-[20px]">About</button>
-            <button className="hoverUnderLineAnimation mr-[20px]">
+            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
+              About
+            </button>
+            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
               Technologies
             </button>
-            <button className="hoverUnderLineAnimation mr-[20px]">
+            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
               Projects
             </button>
-            <button className="hoverUnderLineAnimation mr-[20px]">
+            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
               Contact
             </button>
-            <button className="w-[130px] h-[55px] text-[16px] rounded-xl bg-[blue] mr-[20px]">
+            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[10px]">
               Criar Conta
             </button>
-            <button className="hoverUnderLineAnimation mr-[20px]">
+            <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-[white] flex gap-2 items-center justify-center  mr-[5px]">
+              <span className="text-[24px]">
+                <BsPersonUp />
+              </span>
               Entrar
             </button>
           </nav>
