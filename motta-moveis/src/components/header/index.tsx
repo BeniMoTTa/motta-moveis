@@ -69,17 +69,26 @@ const Header = () => {
           </nav>
         ) : (
           <nav className="md:flex text-[18px] font-bold text-[graphite]">
-            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
-              About
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Comprar
             </button>
-            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
-              Technologies
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Alugar
             </button>
-            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
-              Projects
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Lançamentos
             </button>
-            <button className="text-[15px] hoverUnderLineAnimation mr-[20px]">
-              Contact
+            <button className="text-[15px] hoverUnderLineAnimation mr-[25px]">
+              Descobrir
+            </button>
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Financiamento
+            </button>
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Ajuda
+            </button>
+            <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
+              Anunciar
             </button>
             <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[10px]">
               Criar Conta
