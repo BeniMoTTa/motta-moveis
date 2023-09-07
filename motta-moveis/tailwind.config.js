@@ -10,7 +10,7 @@ export default {
         brand3: "#B0A6F0",
         blueSteelLight: "#ADD8E6",
         blueSteel: "#4682B4",
-        grey1: "#212529",
+        blueBackGround: "rgba(135, 206, 250, 0.3)",
         grey2: "#495057",
         grey3: "#868E96",
         grey4: "#ADB5BD",

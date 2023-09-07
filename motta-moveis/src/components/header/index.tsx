@@ -52,15 +52,15 @@ const Header = () => {
     }
   };
   return (
-    <header className="w-full h-[90px] flex bg-[yellow]">
-      <div className="w-[99%] allign px-[2%] h-full bg-[#fff] text-[pink] flex items-center justify-between">
+    <header className="w-full h-[90px] flex ">
+      <div className="w-[99%] allign px-[2%] h-full bg-blueBackGround text-[pink] flex items-center justify-between">
         <img src={logo} alt="" className="w-[160px]" />
         {showDropdown ? (
           <nav className="md:flex text-[18px] font-bold text-[graphite]">
-            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[20px]">
+            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[20px]">
               Criar Conta
             </button>
-            <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-[white] flex gap-2 items-center justify-center  mr-[20px]">
+            <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-blueSteel flex gap-2 items-center justify-center  mr-[20px]">
               <span className="text-[24px]">
                 <BsPersonUp />
               </span>
@@ -90,7 +90,7 @@ const Header = () => {
             <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
               Anunciar
             </button>
-            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel mr-[10px]">
+            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[10px]">
               Criar Conta
             </button>
             <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-[white] flex gap-2 items-center justify-center  mr-[5px]">
