@@ -52,8 +52,8 @@ const Header = () => {
     }
   };
   return (
-    <header className="w-full h-[90px] flex ">
-      <div className="w-[99%] allign px-[2%] h-full bg-blueBackGround text-[pink] flex items-center justify-between">
+    <header className="w-full h-[90px] flex bg-blueBackGround">
+      <div className="w-[99%] allign px-[2%] h-full  text-[pink] flex items-center justify-between">
         <img src={logo} alt="" className="w-[160px]" />
         {showDropdown ? (
           <nav className="md:flex text-[18px] font-bold text-[graphite]">
