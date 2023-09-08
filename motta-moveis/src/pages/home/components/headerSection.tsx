@@ -68,7 +68,11 @@ const HeaderSection = () => {
                 <span className="text-[orange] text-[22px]">
                   <BsSearch />
                 </span>
-                <input type="text" className="pl-4 w-full h-full" />
+                <input
+                  type="text"
+                  className="pl-4 w-full h-full"
+                  placeholder="Search for anything..."
+                />
               </div>
             </div>
             <div className="mt-[20px] w-[90%]">
