@@ -108,3 +108,6 @@
   border-radius: 150px 0px 150px 0px;
   z-index: 999;
 }
+.hidden {
+  display: none;
+}
