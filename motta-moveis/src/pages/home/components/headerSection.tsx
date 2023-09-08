@@ -1,10 +1,42 @@
 import React, { ChangeEvent, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
+interface Option {
+  label: string;
+  children: string[];
+}
+
 const HeaderSection = () => {
   const [selectedOption, setSelectedOption] = useState("true");
   const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.target.value);
+  };
+  const [selectedCheck, setSelectedCheck] = useState([]);
+  const options: Option[] = [
+    {
+      label: "Residencial",
+      children: [
+        "Apartamento",
+        "Studio",
+        "Kitnet",
+        "Casa",
+        "Casa de condomínio",
+        "Casa de vila",
+        "Cobertura",
+        "Flat",
+        "Loft",
+        "Terreno / Lote / Condomínio",
+        "Fazenda / Sítio / Chácara",
+      ],
+    },
+  ];
+
+  const toggleOption = (option: string) => {
+    if (selectedCheck.includes(option)) {
+      setSelectedCheck(selectedCheck.filter(item));
+    } else {
+      setSelectedCheck([...selectedCheck, option]);
+    }
   };
   return (
     <section className="w-full pt-[2px] bg-blueBackGround pb-[30px]">
@@ -40,7 +72,7 @@ const HeaderSection = () => {
                   onChange={handleOptionChange}
                 />
                 <div className=" text-[16px]  h-[48px] w-full font-bold rounded-md cursor-pointer flex justify-center items-center">
-                  Comprador
+                  Comprar
                 </div>
               </label>
 
@@ -58,27 +90,53 @@ const HeaderSection = () => {
                   onChange={handleOptionChange}
                 />
                 <div className=" border-grey3 text-[16px] h-[48px] w-full font-bold rounded-md px-4 py-2 cursor-pointer flex justify-center items-center">
-                  Anunciante
+                  Alugar
                 </div>
               </label>
             </div>
-            <div className="mt-[20px] w-[90%]">
-              <label>Onde deseja morar?</label>
-              <div className="flex items-center bg-white h-[50px] rounded pl-[10px] mt-[5px]">
-                <span className="text-[orange] text-[22px]">
-                  <BsSearch />
-                </span>
-                <input
-                  type="text"
-                  className="pl-4 w-full h-full"
-                  placeholder="Search for anything..."
-                />
+            <div className="">
+              <div className="mt-[20px] w-[90%]">
+                <label>Onde deseja morar?</label>
+                <div className="flex items-center bg-white h-[50px] rounded pl-[10px] mt-[5px]">
+                  <span className="text-[orange] text-[22px]">
+                    <BsSearch />
+                  </span>
+                  <input
+                    type="text"
+                    className="pl-4 w-full h-full"
+                    placeholder="Digite nome da rua, bairro ou cidade"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="mt-[20px] w-[90%]">
-              <label>Tipo de imóvel</label>
-              <div className="flex items-center bg-white h-[50px] rounded pl-[10px] mt-[5px]">
-                <input type="text" className="pl-4 w-full h-full" />
+              <div className="mt-[20px] w-[90%]">
+                <label>Tipo de imóvel</label>
+                <div>
+                  <select>
+                    {options.map((optionGroup, index) => (
+                      <optgroup key={index} label={optionGroup.label}>
+                        {optionGroup.children.map((option, idx) => (
+                          <option
+                            key={idx}
+                            onClick={() => toggleOption(option)}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={selectedCheck.includes(option)}
+                              readOnly
+                            />
+                            {option}
+                          </option>
+                        ))}
+                      </optgroup>
+                    ))}
+                  </select>
+                  <div>
+                    <strong>Selecionados:</strong>
+                    {selectedCheck.map((option, index) => (
+                      <span key={index}>{option}, </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </form>
