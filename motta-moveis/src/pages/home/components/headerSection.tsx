@@ -11,7 +11,7 @@ const HeaderSection = () => {
   const handleOptionChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.target.value);
   };
-  const [selectedCheck, setSelectedCheck] = useState([]);
+  const [selectedCheck, setSelectedCheck] = useState<string[]>([]);
   const options: Option[] = [
     {
       label: "Residencial",
@@ -29,13 +29,27 @@ const HeaderSection = () => {
         "Fazenda / Sítio / Chácara",
       ],
     },
+    {
+      label: "Comercial",
+      children: [
+        "Loja / Salão / Ponto Comercial",
+        "Conjunto Comercial / Sala",
+        "Casa Comercial",
+        "Hotel / Motel / Pousada",
+        "Andar / Laje Corporativa",
+        "Prédio Inteiro",
+        "Terrenos / Lotes Comerciais",
+        "Galpão / Depósito / Armazém",
+        "Garagem",
+      ],
+    },
   ];
 
   const toggleOption = (option: string) => {
     if (selectedCheck.includes(option)) {
-      setSelectedCheck(selectedCheck.filter(item));
+      setSelectedCheck(selectedCheck.filter((item) => item !== option));
     } else {
-      setSelectedCheck([...selectedCheck, option]);
+      setSelectedCheck((prevSelectedCheck) => [...prevSelectedCheck, option]);
     }
   };
   return (
@@ -122,7 +136,7 @@ const HeaderSection = () => {
                             <input
                               type="checkbox"
                               checked={selectedCheck.includes(option)}
-                              readOnly
+                              onChange={() => toggleOption(option)}
                             />
                             {option}
                           </option>
@@ -130,12 +144,6 @@ const HeaderSection = () => {
                       </optgroup>
                     ))}
                   </select>
-                  <div>
-                    <strong>Selecionados:</strong>
-                    {selectedCheck.map((option, index) => (
-                      <span key={index}>{option}, </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
