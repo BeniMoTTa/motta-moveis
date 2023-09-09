@@ -145,7 +145,7 @@ const HeaderSection = () => {
                     ))}
                   </select>
                 </div>
-                <button className="w-[100px] h-[60px] bg-[orange] text-white rounded-xl text-[18px] ">
+                <button className="w-[100px] h-[60px] bg-[orange] text-white mt-[15px] rounded-xl text-[18px] ">
                   Buscar
                 </button>
               </div>
