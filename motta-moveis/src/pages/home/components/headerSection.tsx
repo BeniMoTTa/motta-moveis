@@ -110,8 +110,8 @@ const HeaderSection = () => {
             </div>
             <div className="">
               <div className="mt-[20px] w-[90%]">
-                <label>Onde deseja morar?</label>
-                <div className="flex items-center bg-white h-[50px] rounded pl-[10px] mt-[5px]">
+                <label className="text-[18px]">Onde deseja morar?</label>
+                <div className="flex items-center bg-white h-[65px] rounded pl-[10px] mt-[10px] text-[18px]">
                   <span className="text-[orange] text-[22px]">
                     <BsSearch />
                   </span>
@@ -123,9 +123,9 @@ const HeaderSection = () => {
                 </div>
               </div>
               <div className="mt-[20px] w-[90%]">
-                <label>Tipo de imóvel</label>
+                <label className="text-[18px]">Tipo de imóvel</label>
                 <div>
-                  <select>
+                  <select className="h-[65px] pl-[10px] w-full rounded text-[18px] mt-[10px]">
                     {options.map((optionGroup, index) => (
                       <optgroup key={index} label={optionGroup.label}>
                         {optionGroup.children.map((option, idx) => (
@@ -145,6 +145,9 @@ const HeaderSection = () => {
                     ))}
                   </select>
                 </div>
+                <button className="w-[100px] h-[60px] bg-[orange] text-white rounded-xl text-[18px] ">
+                  Buscar
+                </button>
               </div>
             </div>
           </form>
