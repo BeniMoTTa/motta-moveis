@@ -1,4 +1,5 @@
 import React from "react";
+import marketing from "../../../assets/tradingMotta.png";
 import CardsPosts from "./CardsPosts";
 
 const Posts = () => {
@@ -10,6 +11,9 @@ const Posts = () => {
       <div className="w-[60px] h-[5px] rounded-xl bg-[orange]"></div>
       <div className="mt-[50px]">
         <CardsPosts />
+      </div>
+      <div>
+        <img src={marketing} alt="" />
       </div>
     </section>
   );
