@@ -10,7 +10,7 @@ const CardsNear = () => {
     },
   ];
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 flex-col">
       {mockCards.map((data, index) => (
         <div key={index} className="w-[250px] h-[450px]">
           <img
