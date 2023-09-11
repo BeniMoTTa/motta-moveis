@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsTwitter,
+  BsYoutube,
+  BsPinterest,
+} from "react-icons/bs";
 
 const FooterMain = () => {
   return (
@@ -66,18 +73,31 @@ const FooterMain = () => {
         <div className="pl-[15px] w-[250px]">
           <h4 className="text-[white] text-[20px] font-bold">Redes Sociais</h4>
           <div className="w-6 h-[1px] bg-white mt-[4px]"></div>
-          <div className="flex flex-col justify-start gap-4 pt-[20px]">
-            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
-              Quer trabalhar conosco?
+          <div className="flex justify-start gap-4 pt-[20px]">
+            <button className="text-white hover:bg-blueSteel text-[18px] w-[38px] h-[38px] rounded-full flex items-center justify-center border-2 w-fit hover:underline underline-offset-auto">
+              <span className="text-[22px]">
+                <BsFacebook />
+              </span>
             </button>
-            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
-              Mapa do site
+            <button className="text-white text-[18px] hover:bg-random10 w-[38px] h-[38px] rounded-full flex items-center justify-center border-2 w-fit hover:underline underline-offset-auto">
+              <span className="text-[22px]">
+                <BsInstagram />
+              </span>
             </button>
-            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
-              Blog
+            <button className="text-white hover:bg-blueSteelLight text-[18px] w-[38px] h-[38px] rounded-full flex items-center justify-center border-2 w-fit hover:underline underline-offset-auto">
+              <span className="text-[22px]">
+                <BsTwitter />
+              </span>
             </button>
-            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
-              Ajuda
+            <button className="text-white text-[18px] hover:bg-random3 w-[38px] h-[38px] rounded-full flex items-center justify-center border-2 w-fit hover:underline underline-offset-auto">
+              <span className="text-[22px]">
+                <BsPinterest />
+              </span>
+            </button>
+            <button className="text-white text-[18px] hover:bg-[red] w-[38px] h-[38px] rounded-full flex items-center justify-center border-2 w-fit hover:underline underline-offset-auto">
+              <span className="text-[22px]">
+                <BsYoutube />
+              </span>
             </button>
           </div>
         </div>
