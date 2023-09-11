@@ -5,6 +5,7 @@ import Posts from "./components/Posts";
 import NearToUser from "./components/NearToUser";
 import AllNear from "./components/AllNear";
 import FooterMain from "../../components/footer";
+import FooterMinor from "../../components/footer/FooterMinor";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <NearToUser />
       <AllNear />
       <FooterMain />
+      <FooterMinor />
     </div>
   );
 };
