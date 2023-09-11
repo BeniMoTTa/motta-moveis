@@ -4,6 +4,7 @@ import HeaderSection from "./components/headerSection";
 import Posts from "./components/Posts";
 import NearToUser from "./components/NearToUser";
 import AllNear from "./components/AllNear";
+import FooterMain from "../../components/footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Posts />
       <NearToUser />
       <AllNear />
+      <FooterMain />
     </div>
   );
 };

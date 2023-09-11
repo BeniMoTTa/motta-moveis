@@ -11,7 +11,7 @@ export default {
         blueSteelLight: "#ADD8E6",
         blueSteel: "#4682B4",
         blueBackGround: "rgba(135, 206, 250, 0.3)",
-        grey2: "#495057",
+        graphite: "#2e2e2e",
         grey3: "#868E96",
         grey4: "#ADB5BD",
         grey5: "#CED4DA",
