@@ -2,10 +2,12 @@ import React from "react";
 
 const FooterMain = () => {
   return (
-    <footer className="w-full h-[700px] bg-graphite">
-      <div className="max-w-[1440px] allign flex pt-[30px]">
+    <footer className="w-full h-[500px] bg-graphite">
+      <div className="max-w-[1440px] allign flex pt-[30px] gap-10 justify-center">
         <div className="pl-[15px] w-[200px]">
-          <h4 className="text-[white] text-[20px]">Encontre Imóveis</h4>
+          <h4 className="text-[white] text-[20px] font-bold">
+            Encontre Imóveis
+          </h4>
           <div className="w-6 h-[1px] bg-white mt-[4px]"></div>
           <div className="flex flex-col justify-start gap-4 pt-[20px]">
             <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
@@ -28,6 +30,54 @@ const FooterMain = () => {
             </button>
             <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
               Meu espaço
+            </button>
+          </div>
+        </div>
+        <div className="pl-[15px] w-[250px]">
+          <h4 className="text-[white] text-[20px] font-bold">Institucional</h4>
+          <div className="w-6 h-[1px] bg-white mt-[4px]"></div>
+          <div className="flex flex-col justify-start gap-4 pt-[20px]">
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Quer trabalhar conosco?
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Mapa do site
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Blog
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Ajuda
+            </button>
+          </div>
+        </div>
+        <div className="pl-[15px] w-[250px]">
+          <h4 className="text-[white] text-[20px] font-bold">Anunciante</h4>
+          <div className="w-6 h-[1px] bg-white mt-[4px]"></div>
+          <div className="flex flex-col justify-start gap-4 pt-[20px]">
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Anunciar imóvel
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Política de Qualidade
+            </button>
+          </div>
+        </div>
+        <div className="pl-[15px] w-[250px]">
+          <h4 className="text-[white] text-[20px] font-bold">Redes Sociais</h4>
+          <div className="w-6 h-[1px] bg-white mt-[4px]"></div>
+          <div className="flex flex-col justify-start gap-4 pt-[20px]">
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Quer trabalhar conosco?
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Mapa do site
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Blog
+            </button>
+            <button className="text-white text-[18px] w-fit hover:underline underline-offset-auto">
+              Ajuda
             </button>
           </div>
         </div>
