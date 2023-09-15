@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/LogoMottaImoveis.png";
 import { BsPersonUp } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
+  const navigate = useNavigate();
   const checkScreenWidth = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 768 && screenWidth <= 1200) {
@@ -57,7 +58,10 @@ const Header = () => {
         <img src={logo} alt="" className="w-[160px]" />
         {showDropdown ? (
           <nav className="md:flex text-[18px] font-bold text-[graphite]">
-            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[20px]">
+            <button
+              className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[20px]"
+              onClick={() => navigate("/signup")}
+            >
               Criar Conta
             </button>
             <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-blueSteel flex gap-2 items-center justify-center  mr-[20px]">
@@ -90,7 +94,10 @@ const Header = () => {
             <button className="text-[16px] hoverUnderLineAnimation mr-[25px]">
               Anunciar
             </button>
-            <button className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[10px]">
+            <button
+              className="w-[140px] h-[50px] text-[16px] text-[white] rounded-xl bg-blueSteel hover:bg-[#191970] mr-[10px]"
+              onClick={() => navigate("/signup")}
+            >
               Criar Conta
             </button>
             <button className="w-[120px] h-[50px] text-[15px] rounded-xl text-blueSteel hover:bg-blueSteelLight hover:text-[white] flex gap-2 items-center justify-center  mr-[5px]">
