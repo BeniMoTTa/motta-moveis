@@ -141,7 +141,7 @@ const Register = () => {
                 <span className="text-[18px] span-animation">
                   <SlLogout />
                 </span>
-                Voltar para a home
+                Voltar para a página inicial
               </Link>
             </div>
           </form>
