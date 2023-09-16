@@ -130,9 +130,12 @@ const Register = () => {
             <div className="w-full flex justify-center items-center mt-[10px] flex-col">
               <p className="text-[18px]">
                 Já possui conta?{" "}
-                <span className="text-[orange] hover:underline cursor-pointer">
+                <Link
+                  to={"/login"}
+                  className="text-[orange] hover:underline cursor-pointer"
+                >
                   Clique aqui!
-                </span>
+                </Link>
               </p>
               <Link
                 to={"/"}
