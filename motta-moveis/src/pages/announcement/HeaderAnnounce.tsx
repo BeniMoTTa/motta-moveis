@@ -14,6 +14,7 @@ const HeaderAnnounce = () => {
           Entrar
         </button>
       </div>
+      <div></div>
     </header>
   );
 };
