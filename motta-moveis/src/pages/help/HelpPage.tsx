@@ -6,6 +6,7 @@ const HelpPage = () => {
       <div></div>
       <div></div>
       <div></div>
+      <div></div>
     </div>
   );
 };
